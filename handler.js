@@ -198,10 +198,7 @@ export default async function handleMessage(conn, m) {
         const hasConfigPrefix = (config.prefix || ['.']).some(p => m.text.startsWith(p))
 
         if (!hasConfigPrefix) {
-            // Custom prefix (=> / $ / keyword)
             let matchedHandler = null
-
-            // Prioritas 1: hard prefix (^=> / ^$)
             for (const handler of plugins.values()) {
                 if (!handler.customPrefix) continue
                 if (!handler.customPrefix.source.startsWith('^')) continue
