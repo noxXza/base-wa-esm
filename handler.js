@@ -175,7 +175,6 @@ export default async function handleMessage(conn, m) {
             return false
         }
 
-        // Button response
         if (isButtonResponse) {
             let bodyText = body
             const prefixes = config.prefix || ['.']
@@ -196,7 +195,6 @@ export default async function handleMessage(conn, m) {
             })
         }
 
-        // Skip custom prefix kalau ada prefix config di depannya
         const hasConfigPrefix = (config.prefix || ['.']).some(p => m.text.startsWith(p))
 
         if (!hasConfigPrefix) {
@@ -212,7 +210,6 @@ export default async function handleMessage(conn, m) {
                 break
             }
 
-            // Prioritas 2: keyword (npm / baileys / dll)
             if (!matchedHandler) {
                 for (const handler of plugins.values()) {
                     if (!handler.customPrefix) continue
@@ -236,13 +233,11 @@ export default async function handleMessage(conn, m) {
             }
         }
 
-                // Normal command
         let prefix = ''
         let command = ''
         let args = []
 
         if (hasConfigPrefix) {
-            // Ada prefix → bebas pakai argumen
             prefix = (config.prefix || ['.']).find(p => m.text.startsWith(p))
             const body2 = m.text.slice(prefix.length).trim()
             if (!body2) return
@@ -250,9 +245,8 @@ export default async function handleMessage(conn, m) {
             command = parts.shift().toLowerCase()
             args = parts
         } else {
-            // Tanpa prefix → harus exact match, tidak boleh ada kata tambahan
             const trimmed = m.text.trim()
-            if (/\s/.test(trimmed)) return   // ada spasi → bukan command murni
+            if (/\s/.test(trimmed)) return
             command = trimmed.toLowerCase()
             args = []
         }
