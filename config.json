@@ -1,0 +1,12 @@
+{
+  "botName": "noxleyss - base",
+  "ownerName": "noxXza.exe",
+  "creator": ["6283134600805"],
+  "prefix": [".", "#", "!", "/"],
+  "botMode": "public",
+  "accessDenied": {
+    "owner": "Fitur ini khusus Owner.",
+    "creator": "Fitur ini khusus Creator.",
+    "premium": "Fitur ini khusus Premium."
+  }
+}
