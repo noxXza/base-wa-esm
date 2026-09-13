@@ -3,7 +3,6 @@ import util from 'util'
 const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
 
 function formatErrorName(name) {
-    // "ReferenceError" -> "Reference Error"
     return String(name).replace(/([a-z])([A-Z])/g, '$1 $2')
 }
 
