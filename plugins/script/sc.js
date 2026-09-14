@@ -41,7 +41,7 @@ jika kamu menginginkan base script ini silahkan klik tombol di bawah ini
                     name: 'cta_url',
                     buttonParamsJson: JSON.stringify({
                         display_text: 'get sc',
-                        url: 'https://github.com/noxXza/base-noxleyss',
+                        url: 'https://github.com/noxXza/base-wa-esm',
                         merchant_url: 'https://www.google.com'
                     })
                 }],
