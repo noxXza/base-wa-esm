@@ -10,11 +10,11 @@ let handler = async (m, { conn }) => {
 
 📍*cara penggunaan*📍
 
-\`\`\`"@whiskeysockets/baileys": "npm:noxleyss@latest",
+\`\`\`"noxleyss": "latest",
 
 {
   "dependencies": {
-    "@whiskeysockets/baileys": "npm:noxleyss@latest",
+    "noxleyss": "latest",
     "@hapi/boom": "^10.0.1",
     "pino": "^8.17.2",
     "jimp": "^0.22.12",
@@ -49,7 +49,7 @@ https://www.npmjs.com/noxleyss
                         buttonParamsJson: JSON.stringify({
                             display_text: 'Copy baileys',
                             id: 'copy_baileys',
-                            copy_code: '"@whiskeysockets/baileys": "npm:noxleyss"'
+                            copy_code: '"noxleyss": "latest"'
                         })
                     },
                     {
