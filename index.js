@@ -9,7 +9,7 @@ import {
     makeCacheableSignalKeyStore,
     fetchLatestBaileysVersion,
     makeWASocket
-} from '@whiskeysockets/baileys'
+} from 'noxleyss'
 import { smsg } from './lib/myfunc.js'
 import handleMessage, { initPlugins } from './handler.js'
 
