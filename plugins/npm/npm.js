@@ -1,4 +1,4 @@
-import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
+import { generateWAMessageFromContent } from 'noxleyss'
 
 let handler = async (m, { conn }) => {
     const pushname = m.pushName || 'No Name'
